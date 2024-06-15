@@ -1,0 +1,41 @@
+{
+  "include": [
+    "src",
+    "jest.config.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    ".vscode"
+  ],
+  "ts-node": {
+    // Do not forget to `npm i -D tsconfig-paths`
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDirs": [
+      "src",
+    ],
+    "outDir": "dist",
+    "declaration": true,
+    "strict": true,
+    "baseUrl": "src",
+    "paths": {
+      "@utils": [
+        "utils"
+      ],
+      "@modules": [
+        "modules"
+      ]
+    }
+  }
+}

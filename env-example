@@ -1,0 +1,18 @@
+NODE_ENV=<test | local | dev | development | sit | staging | prod | production | release>
+
+LOG_LEVEL=<test | error | debug | prod> # optional, default: prod
+
+PORT=2999
+ALLOWED_ORIGINS=http://localhost:3000
+API_VERSION=<v1 | v2 | v3 | ... > # optional, default: v1
+
+DB_CONN_STR=mongodb://127.0.0.1:27017/mern-boilerplate
+
+SESSION_SECRET=<session secret> # optional, default: session-secret
+
+ACCESS_TOKEN_SECRET=<access token secret>
+REFRESH_TOKEN_SECRET=<refresh token secret>
+ACCESS_TOKEN_EXP_IN=<access token expires in> # optional, default: 900000 (15min) 
+
+ENCRYPTION_ALGORITHM=aes-256-cbc
+ENCRYPTION_KEY=<encryption key>
