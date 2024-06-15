@@ -37,5 +37,5 @@ export default {
       Bearer: []
     }
   },
-  apis: ['./src/resources/**/*.ts']
+  apis: ['./src/modules/**/*.ts']
 };

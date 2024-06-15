@@ -47,9 +47,16 @@ export const Environment = {
   },
   getApiVersion: (): string => getOptionalEnv('API_VERSION', 'v1'),
 
-  getDBConnectionString: (): string => getEnvOrThrow('DB_CONN_STR'),
+  getDBConnectionString: (): string => {
+    const dbHost = getEnvOrThrow('DB_HOST');
+    const dbPort = getOptionalEnv('DB_PORT', undefined);
+    const dbUsername = getOptionalEnv('DB_USERNAME', undefined);
+    const dbPassword = getOptionalEnv('DB_PASSWORD', undefined);
+    return `mongodb://${dbUsername && dbPassword ? `${dbUsername}:${dbPassword}@` : ''}${dbHost}${dbPort ? `:${dbPort}` : ''}`;
+  },
+  getDbName: (): string => getEnvOrThrow('DB_NAME'),
 
-  getSessionSecret: (): string => getOptionalEnv('SESSION_SECRET', 'mern-boilerplate-session-secret'),
+  getSessionSecret: (): string => getOptionalEnv('SESSION_SECRET', 'session-secret'),
 
   getAccessTokenSecret: (): string => getEnvOrThrow('ACCESS_TOKEN_SECRET'),
   getRefreshTokenSecret: (): string => getEnvOrThrow('REFRESH_TOKEN_SECRET'),

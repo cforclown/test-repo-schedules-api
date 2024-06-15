@@ -12,7 +12,7 @@ export function AuthRouter (authController: AuthController): express.Router {
   const apiVersion = Environment.getApiVersion();
   /**
    * @swagger
-   * /auth/login:
+   * /api/v1/auth/login:
    *      post:
    *          tags:
    *              - Authentication
@@ -44,7 +44,7 @@ export function AuthRouter (authController: AuthController): express.Router {
 
   /**
    * @swagger
-   * /auth/register:
+   * /api/v1/auth/register:
    *      post:
    *          tags:
    *              - Authentication
@@ -63,7 +63,7 @@ export function AuthRouter (authController: AuthController): express.Router {
 
   /**
    * @swagger
-   * /auth/refresh:
+   * /api/v1/auth/refresh:
    *      post:
    *          tags:
    *              - Authentication
@@ -82,7 +82,7 @@ export function AuthRouter (authController: AuthController): express.Router {
 
   /**
    * @swagger
-   * /auth/logout:
+   * /api/v1/auth/logout:
    *      delete:
    *          tags:
    *              - Authentication
@@ -97,7 +97,7 @@ export function AuthRouter (authController: AuthController): express.Router {
 
   /**
    * @swagger
-   * /auth/validate:
+   * /api/v1/auth/validate:
    *      put:
    *          tags:
    *              - Authentication

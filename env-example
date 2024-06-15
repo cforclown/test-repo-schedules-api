@@ -1,18 +1,22 @@
-NODE_ENV=<test | local | dev | development | sit | staging | prod | production | release>
+NODE_ENV=dev
 
-LOG_LEVEL=<test | error | debug | prod> # optional, default: prod
+LOG_LEVEL=debug
 
 PORT=2999
 ALLOWED_ORIGINS=http://localhost:3000
-API_VERSION=<v1 | v2 | v3 | ... > # optional, default: v1
+API_VERSION=v1
 
-DB_CONN_STR=mongodb://127.0.0.1:27017/mern-boilerplate
+DB_HOST=localhost
+DB_PORT=27017
+DB_USERNAME=root
+DB_PASSWORD=root
+DB_NAME=test-repo-schedules-api
 
-SESSION_SECRET=<session secret> # optional, default: session-secret
+SESSION_SECRET=test-repo-schedules-api-session-secret
 
-ACCESS_TOKEN_SECRET=<access token secret>
-REFRESH_TOKEN_SECRET=<refresh token secret>
-ACCESS_TOKEN_EXP_IN=<access token expires in> # optional, default: 900000 (15min) 
+ACCESS_TOKEN_SECRET=test-repo-schedules-api-access-token-secret
+REFRESH_TOKEN_SECRET=test-repo-schedules-api-refresh-token-secret
+ACCESS_TOKEN_EXP_IN=900000
 
 ENCRYPTION_ALGORITHM=aes-256-cbc
-ENCRYPTION_KEY=<encryption key>
+ENCRYPTION_KEY=test-repo-schedules-api-encryption-key

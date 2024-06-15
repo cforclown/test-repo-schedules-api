@@ -11,7 +11,9 @@ class Database {
   }
 
   async connect (): Promise<void> {
-    await mongoose.connect(Environment.getDBConnectionString());
+    await mongoose.connect(Environment.getDBConnectionString(), {
+      dbName: Environment.getDbName()
+    });
   }
 
   close (): void {
